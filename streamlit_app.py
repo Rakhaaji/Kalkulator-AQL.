@@ -1,57 +1,34 @@
 import streamlit as st
 
+import streamlit as st
 import math
-if page == "Beranda":
-    st.markdown("""
-        <style>
-        .intro-box {
-            background-color: #f0f8ff;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #dce6f1;
-        }
-        .feature-box {
-            background-color: #e6f7e6;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #cce0cc;
-        }
-        </style>
-    """, unsafe_allow_html=True)
 
-    st.title("📦 Selamat Datang di Kalkulator AQL")
-    st.markdown("""
-    <div class='intro-box'>
-        <h4>🔍 Apa itu AQL?</h4>
-        <p>
-        <strong>AQL (Acceptable Quality Limit)</strong> adalah standar industri untuk menentukan batas maksimal jumlah cacat yang dapat diterima dalam suatu pengambilan sampel.
-        Kalkulator ini membantu Anda mengambil keputusan apakah suatu <em>lot produksi</em> harus <strong>diterima</strong> atau <strong>ditolak</strong> berdasarkan jumlah cacat.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+st.set_page_config(page_title="Kalkulator AQL", layout="centered")
 
-    st.subheader("🎯 Fitur Utama")
-    col1, col2 = st.columns(2)
+st.title("📊 Kalkulator AQL (Acceptable Quality Limit)")
 
-    with col1:
-        st.markdown("""
-        <div class='feature-box'>
-        ✅ Perhitungan cepat berdasarkan nilai AQL<br>
-        ✅ Mudah digunakan oleh operator QC<br>
-        ✅ Tidak perlu rumus rumit
-        </div>
-        """, unsafe_allow_html=True)
+# Input
+lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
+sample_size = st.number_input("Ukuran Sampel", min_value=1, value=50)
+aql = st.number_input("Nilai AQL (%)", min_value=0.01, value=1.0, format="%.2f")
+defects_found = st.number_input("Jumlah Cacat yang Ditemukan", min_value=0, value=0)
 
-    with col2:
-        st.markdown("""
-        <div class='feature-box'>
-        📊 Visual & intuitif<br>
-        ⚙️ Cocok untuk berbagai ukuran lot<br>
-        🏭 Siap digunakan di lingkungan manufaktur
-        </div>
-        """, unsafe_allow_html=True)
+# Fungsi untuk menghitung acceptance number (berdasarkan standar kasar)
+def get_acceptance_number(sample_size, aql_percent):
+    aql = aql_percent / 100
+    # Approximate acceptance number using binomial approximation
+    return math.floor(sample_size * aql + 0.5)
 
-    st.markdown("---")
-    st.markdown("👈 **Gunakan menu di samping kiri untuk memulai perhitungan AQL.**")
+if st.button("Hitung Hasil"):
+    acceptance_number = get_acceptance_number(sample_size, aql)
+    
+    st.write(f"🔢 **Acceptance Number (Ac):** {acceptance_number}")
+    st.write(f"❌ **Rejection Number (Re):** {acceptance_number + 1}")
+    
+    if defects_found <= acceptance_number:
+        st.success("✅ LOT DITERIMA")
+    else:
+        st.error("❌ LOT DITOLAK")
 
+   
+        
