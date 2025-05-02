@@ -17,7 +17,7 @@ def hitung_acceptance(sample_size, aql_percent):
 # Halaman BERANDA
 # ------------------------
 if page == "Beranda":
-    st.title("📦 Selamat Datang di Kalkulator AQL")
+    st.title("📦 Selamat Datang di Kalkulator AQL kelompok 3")
     st.write("""
     AQL (**Acceptable Quality Limit**) adalah batas maksimum jumlah produk cacat yang dianggap masih dapat diterima dalam suatu sampel inspeksi.
     
