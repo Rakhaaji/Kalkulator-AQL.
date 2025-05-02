@@ -83,11 +83,11 @@ if page == "Beranda":
     st.markdown("""
     <div class='group-box'>
     <ul>
-        <li>👤 Arya Suhada Maridha</li>
-        <li>👤 Aura Fathanza</li>
-        <li>👤 Maulidia Aliya R</li>
-        <li>👤 Rakha Wahyu H</li>
-        <li>👤 Salfa Nabigha A</li>
+        <li>👩🏻‍🔬 Arya Suhada Maridha</li>
+        <li>👩🏻‍🔬 Aura Fathanza</li>
+        <li>👩🏻‍🔬 Maulidia Aliya R</li>
+        <li>👨🏻‍🔬 Rakha Wahyu Hendriaji</li>
+        <li>👩🏻‍🔬 Salfa Nabigha Aureliza</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
