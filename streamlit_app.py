@@ -6,7 +6,7 @@ import math
 st.set_page_config(page_title="AQL Checker", layout="centered")
 
 # Sidebar navigation
-st.sidebar.title("Navigasi")
+st.sidebar.title("Menu")
 page = st.sidebar.radio("Pilih Halaman", ["Beranda", "Kalkulator AQL"])
 
 def hitung_acceptance(sample_size, aql_percent):
