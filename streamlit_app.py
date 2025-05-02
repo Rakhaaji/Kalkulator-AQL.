@@ -38,7 +38,7 @@ if page == "Beranda":
         </style>
     """, unsafe_allow_html=True)
 
-    st.title("📦 Selamat Datang di Kalkulator AQL")
+    st.title("📦 Selamat Datang di Kalkulator AQL kelompok 3 🥼")
 
     # Penjelasan AQL
     st.markdown("""
