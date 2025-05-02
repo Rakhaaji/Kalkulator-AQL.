@@ -118,8 +118,20 @@ elif page == "Kalkulator AQL":
 
         st.markdown(f"**Acceptance Number (Ac):** {acceptance_number}")
         st.markdown(f"**Rejection Number (Re):** {rejection_number}")
+        st.markdown("### 🧾 Kesimpulan")
+
+
 
         if defects_found <= acceptance_number:
             st.success("✅ LOT DITERIMA")
+            st.markdown(f"""
+            Jumlah cacat yang ditemukan (`{defects_found}`) masih berada di bawah atau sama dengan nilai batas maksimum (`Ac = {acceptance_number}`),
+            sehingga **lot ini dapat diterima** sesuai standar AQL `{aql:.2f}%`.
+            """)
+
         else:
-            st.error("❌ LOT DITOLAK")   
+            st.error("❌ LOT DITOLAK") 
+            st.markdown(f"""
+            Jumlah cacat yang ditemukan (`{defects_found}`) **melebihi** nilai batas maksimum (`Ac = {acceptance_number}`),
+            sehingga **lot ini tidak memenuhi syarat** dan harus ditolak atau diperiksa ulang.
+            """)
