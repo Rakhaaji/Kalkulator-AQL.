@@ -21,7 +21,7 @@ if page == "Beranda":
     st.write("""
     AQL (**Acceptable Quality Limit**) adalah batas maksimum jumlah produk cacat yang dianggap masih dapat diterima dalam suatu sampel inspeksi.
     
-    Alat ini membantu Anda menghitung apakah suatu **lot** (jumlah barang dalam batch produksi) dapat diterima atau ditolak berdasarkan jumlah sampel, cacat yang ditemukan, dan nilai AQL.
+    Alat ini membantu Anda menghitung apakah suatu **lot** (jumlah barang dalam batch produksi) dapat diterima atau ditolak berdasarkan jumlah sampel, cacat yang ditemukan, dan nilai AQL.Dengan aplikasi ini kalian dapat menemukan sampel lebih mudah dibandingkan yang sebelumnya.
 
     ### 👈 Gunakan menu di sebelah kiri untuk mengakses kalkulator.
     """)
