@@ -17,65 +17,75 @@ def hitung_acceptance(sample_size, aql_percent):
 # Halaman BERANDA
 # ------------------------
 if page == "Beranda":
-
-    
-    # Tambahkan gaya CSS untuk tampilan profesional
+if page == "Beranda":
     st.markdown("""
         <style>
-        .intro-box {
-            background-color: #f0f8ff;
+        .industrial-bg {
+            background-color: #f5f7fa;
             padding: 25px;
             border-radius: 12px;
-            border: 1px solid #dce6f1;
+            border: 1px solid #ccd3dc;
         }
         .feature-box {
-            background-color: #e6f7e6;
+            background-color: #e2e8f0;
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 8px;
             margin-bottom: 10px;
-            border: 1px solid #cce0cc;
+            border: 1px solid #cbd5e0;
+            font-weight: 500;
+        }
+        .industrial-header {
+            font-size: 24px;
+            color: #1a202c;
+            font-weight: bold;
         }
         </style>
     """, unsafe_allow_html=True)
 
-    st.title("📦 Selamat Datang di Kalkulator AQL kelompok 3 🥼")
+    st.image("https://cdn-icons-png.flaticon.com/512/2819/2819592.png", width=80)  # Icon industri
 
-    # Penjelasan AQL
+    st.markdown("<div class='industrial-header'>🏭 Sistem Pemeriksaan Kualitas - AQL</div>", unsafe_allow_html=True)
+
     st.markdown("""
-    <div class='intro-box'>
+    <div class='industrial-bg'>
         <h4>🔍 Apa itu AQL?</h4>
         <p>
-        <strong>AQL (Acceptable Quality Limit)</strong> adalah jumlah maksimum cacat yang dapat diterima dalam suatu sampel inspeksi.
-        Kalkulator ini membantu Anda menentukan apakah <em>lot produksi</em> dapat <strong>diterima</strong> atau <strong>ditolak</strong> berdasarkan parameter yang Anda masukkan.
+        <strong>AQL (Acceptable Quality Limit)</strong> adalah batas maksimum jumlah cacat yang diperbolehkan dalam suatu sampel acak
+        sebelum seluruh lot produksi dianggap tidak memenuhi standar kualitas. Dalam industri manufaktur, AQL membantu tim QC memastikan
+        produk sesuai spesifikasi tanpa memeriksa semua item.
+        </p>
+        <p>
+        Kalkulator ini dirancang untuk tim inspeksi dan kontrol kualitas di lingkungan industri untuk mempercepat pengambilan keputusan.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    st.subheader("🎯 Fitur Utama")
+    st.subheader("🔧 Fitur Sistem")
 
     col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("""
         <div class='feature-box'>
-        ✅ Perhitungan cepat berbasis nilai AQL<br>
-        ✅ Tidak perlu buka tabel manual<br>
-        ✅ Cocok untuk operator QC di lapangan
+        ✔️ Hitung nilai Acceptance/Rejection<br>
+        ✔️ Sesuaikan dengan berbagai ukuran lot<br>
+        ✔️ Tidak perlu tabel AQL manual
         </div>
         """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("""
         <div class='feature-box'>
-        ⚙️ Bisa digunakan untuk berbagai ukuran lot<br>
-        📊 Tampilan hasil kalkulasi yang jelas<br>
-        🏭 Siap digunakan dalam lingkungan industri
+        📦 Cocok untuk operator QC pabrik<br>
+        ⏱️ Proses cepat dan real-time<br>
+        💼 Siap digunakan di lingkungan industri
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("---")
-    st.info("👈 Gunakan menu di sebelah kiri untuk membuka kalkulator AQL.")
+    st.success("➡️ Gunakan menu di samping kiri untuk mulai menghitung AQL.")
 
+    
     
 # ------------------------
 # Halaman KALKULATOR
