@@ -18,7 +18,7 @@ def hitung_acceptance(sample_size, aql_percent):
 # ------------------------
 if page == "Beranda":
 
-    # Gaya latar belakang bertema industri
+    # Gaya industri dan latar belakang
     st.markdown("""
         <style>
         .stApp {
@@ -28,7 +28,7 @@ if page == "Beranda":
             background-attachment: fixed;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 2rem;
             border-radius: 12px;
         }
@@ -39,16 +39,23 @@ if page == "Beranda":
             margin-bottom: 10px;
             border: 1px solid #cbd5e0;
         }
+        .group-box {
+            background-color: #fefcbf;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+        }
         </style>
     """, unsafe_allow_html=True)
 
     st.markdown("<div class='container'>", unsafe_allow_html=True)
-    st.title("🏭 Selamat Datang di Kalkulator AQL untuk Industri")
+    st.title("🏭 Kalkulator AQL untuk Industri")
 
     st.markdown("""
     <h4>🔍 Apa itu AQL?</h4>
     <p><strong>AQL (Acceptable Quality Limit)</strong> adalah metode penentuan batas cacat maksimum dalam inspeksi produk.</p>
-    <p>Kalkulator ini membantu memastikan bahwa produk Anda memenuhi standar kualitas industri secara efisien dan akurat.Tidak hanya itu, kalkulator ini akan mempercepat waktu dalam menyimpulkan sampel yang akan diambil ataupun ditolak</p>
+    <p>Kalkulator ini membantu memastikan bahwa produk Anda memenuhi standar kualitas industri secara efisien dan akurat.</p>
     """, unsafe_allow_html=True)
 
     st.subheader("🔧 Fitur Utama")
@@ -71,8 +78,25 @@ if page == "Beranda":
 
     st.markdown("---")
     st.success("👈 Gunakan menu di sebelah kiri untuk memulai kalkulasi AQL.")
+
+    st.markdown("### 👥 Kelompok Pengembang")
+    st.markdown("""
+    <div class='group-box'>
+    <ul>
+        <li>👤 Arya Suhada Maridha</li>
+        <li>👤 Aura Fathanza</li>
+        <li>👤 Maulidia Aliya R</li>
+        <li>👤 Rakha Wahyu H</li>
+        <li>👤 Salfa Nabigha A</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown("</div>", unsafe_allow_html=True)
- 
+
+    
+            
+        
 
     
     
