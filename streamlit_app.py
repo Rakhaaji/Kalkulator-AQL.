@@ -79,7 +79,7 @@ if page == "Beranda":
     st.markdown("---")
     st.success("👈 Gunakan menu di sebelah kiri untuk memulai kalkulasi AQL.")
 
-    st.markdown("### 👥 Kelompok Pengembang")
+    st.markdown("### 👩🏻‍🔬👨🏻‍🔬 Kelompok Pengembang")
     st.markdown("""
     <div class='group-box'>
     <ul>
