@@ -112,14 +112,28 @@ elif page == "Kalkulator AQL":
     aql = st.number_input("Nilai AQL (%)", min_value=0.01, value=1.0, format="%.2f")
     defects_found = st.number_input("Jumlah Cacat yang Ditemukan", min_value=0, value=0)
 
-    if st.button("Hitung Hasil"):
+        if st.button("Hitung Hasil"):
         acceptance_number = hitung_acceptance(sample_size, aql)
         rejection_number = acceptance_number + 1
 
-        st.markdown(f"**Acceptance Number (Ac):** `{acceptance_number}`")
-        st.markdown(f"**Rejection Number (Re):** `{rejection_number}`")
+        st.markdown("### 📋 Hasil Perhitungan")
+        st.markdown(f"- **Acceptance Number (Ac):** `{acceptance_number}`")
+        st.markdown(f"- **Rejection Number (Re):** `{rejection_number}`")
+        st.markdown(f"- **Jumlah Cacat yang Ditemukan:** `{defects_found}`")
+
+        st.markdown("---")
+        st.markdown("### 🧾 Kesimpulan")
 
         if defects_found <= acceptance_number:
-            st.success("✅ LOT DITERIMA")
+            st.success("✅ **LOT DITERIMA**")
+            st.markdown(f"""
+            Jumlah cacat yang ditemukan (`{defects_found}`) masih berada di bawah atau sama dengan nilai batas maksimum (`Ac = {acceptance_number}`),
+            sehingga **lot ini dapat diterima** sesuai standar AQL `{aql:.2f}%`.
+            """)
         else:
-            st.error("❌ LOT DITOLAK")
+            st.error("❌ **LOT DITOLAK**")
+            st.markdown(f"""
+            Jumlah cacat yang ditemukan (`{defects_found}`) **melebihi** nilai batas maksimum (`Ac = {acceptance_number}`),
+            sehingga **lot ini tidak memenuhi syarat** dan harus ditolak atau diperiksa ulang.
+            """)
+
