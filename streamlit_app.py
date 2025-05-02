@@ -106,12 +106,6 @@ if page == "Beranda":
 elif page == "Kalkulator AQL":
     st.title("⚖️ Kalkulator AQL")
 
-    # Input
-    lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
-    sample_size = st.number_input("Ukuran Sampel", min_value=1, value=50)
-    aql = st.number_input("Nilai AQL (%)", min_value=0.01, value=1.0, format="%.2f")
-    defects_found = st.number_input("Jumlah Cacat yang Ditemukan", min_value=0, value=0)
-
         if st.button("Hitung Hasil"):
         acceptance_number = hitung_acceptance(sample_size, aql)
         rejection_number = acceptance_number + 1
