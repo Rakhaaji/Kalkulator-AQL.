@@ -50,12 +50,12 @@ if page == "Beranda":
     """, unsafe_allow_html=True)
 
     st.markdown("<div class='container'>", unsafe_allow_html=True)
-    st.title("🏭 Kalkulator AQL untuk Industri")
+    st.title("🏭 Selamat Datang di Kalkulator AQL untuk Industri 4.0")
 
     st.markdown("""
     <h4>🔍 Apa itu AQL?</h4>
     <p><strong>AQL (Acceptable Quality Limit)</strong> adalah metode penentuan batas cacat maksimum dalam inspeksi produk.</p>
-    <p>Kalkulator ini membantu memastikan bahwa produk Anda memenuhi standar kualitas industri secara efisien dan akurat.</p>
+    <p>Kalkulator ini membantu memastikan bahwa produk Anda memenuhi standar kualitas industri secara efisien dan akurat.Selain itu, dengan kalkulator ini anda dapat melakukan pekerjaan secara cepat dan lebih efisien.</p>
     """, unsafe_allow_html=True)
 
     st.subheader("🔧 Fitur Utama")
@@ -72,7 +72,7 @@ if page == "Beranda":
         st.markdown("""
         <div class='feature-box'>
         📦 Dukungan berbagai ukuran lot<br>
-        🧰 Cocok untuk lingkungan pabrik
+        🏭 Cocok untuk lingkungan pabrik
         </div>
         """, unsafe_allow_html=True)
 
@@ -97,8 +97,6 @@ if page == "Beranda":
     
             
         
-
-    
     
 # ------------------------
 # Halaman KALKULATOR
