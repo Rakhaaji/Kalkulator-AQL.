@@ -18,7 +18,7 @@ def hitung_acceptance(sample_size, aql_percent):
 # ------------------------
 if page == "Beranda":
 
-    if page == "Beranda":
+    
     # Tambahkan gaya CSS untuk tampilan profesional
     st.markdown("""
         <style>
