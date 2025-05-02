@@ -30,7 +30,7 @@ if page == "Beranda":
 # Halaman KALKULATOR
 # ------------------------
 elif page == "Kalkulator AQL":
-    st.title("🔢 Kalkulator AQL")
+    st.title("⚖️ Kalkulator AQL")
 
     # Input
     lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
