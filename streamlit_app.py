@@ -3,32 +3,49 @@ import streamlit as st
 import streamlit as st
 import math
 
-st.set_page_config(page_title="Kalkulator AQL", layout="centered")
+st.set_page_config(page_title="AQL Checker", layout="centered")
 
-st.title("📊 Kalkulator AQL (Acceptable Quality Limit)")
+# Sidebar navigation
+st.sidebar.title("Navigasi")
+page = st.sidebar.radio("Pilih Halaman", ["Beranda", "Kalkulator AQL"])
 
-# Input
-lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
-sample_size = st.number_input("Ukuran Sampel", min_value=1, value=50)
-aql = st.number_input("Nilai AQL (%)", min_value=0.01, value=1.0, format="%.2f")
-defects_found = st.number_input("Jumlah Cacat yang Ditemukan", min_value=0, value=0)
-
-# Fungsi untuk menghitung acceptance number (berdasarkan standar kasar)
-def get_acceptance_number(sample_size, aql_percent):
+def hitung_acceptance(sample_size, aql_percent):
     aql = aql_percent / 100
-    # Approximate acceptance number using binomial approximation
     return math.floor(sample_size * aql + 0.5)
 
-if st.button("Hitung Hasil"):
-    acceptance_number = get_acceptance_number(sample_size, aql)
+# ------------------------
+# Halaman BERANDA
+# ------------------------
+if page == "Beranda":
+    st.title("📦 Selamat Datang di Kalkulator AQL")
+    st.write("""
+    AQL (**Acceptable Quality Limit**) adalah batas maksimum jumlah produk cacat yang dianggap masih dapat diterima dalam suatu sampel inspeksi.
     
-    st.write(f"🔢 **Acceptance Number (Ac):** {acceptance_number}")
-    st.write(f"❌ **Rejection Number (Re):** {acceptance_number + 1}")
-    
-    if defects_found <= acceptance_number:
-        st.success("✅ LOT DITERIMA")
-    else:
-        st.error("❌ LOT DITOLAK")
+    Alat ini membantu Anda menghitung apakah suatu **lot** (jumlah barang dalam batch produksi) dapat diterima atau ditolak berdasarkan jumlah sampel, cacat yang ditemukan, dan nilai AQL.
 
-   
-        
+    ### 👈 Gunakan menu di sebelah kiri untuk mengakses kalkulator.
+    """)
+
+# ------------------------
+# Halaman KALKULATOR
+# ------------------------
+elif page == "Kalkulator AQL":
+    st.title("🔢 Kalkulator AQL")
+
+    # Input
+    lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
+    sample_size = st.number_input("Ukuran Sampel", min_value=1, value=50)
+    aql = st.number_input("Nilai AQL (%)", min_value=0.01, value=1.0, format="%.2f")
+    defects_found = st.number_input("Jumlah Cacat yang Ditemukan", min_value=0, value=0)
+
+    if st.button("Hitung Hasil"):
+        acceptance_number = hitung_acceptance(sample_size, aql)
+        rejection_number = acceptance_number + 1
+
+        st.markdown(f"**Acceptance Number (Ac):** `{acceptance_number}`")
+        st.markdown(f"**Rejection Number (Re):** `{rejection_number}`")
+
+        if defects_found <= acceptance_number:
+            st.success("✅ LOT DITERIMA")
+        else:
+            st.error("❌ LOT DITOLAK")
