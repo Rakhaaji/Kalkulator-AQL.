@@ -17,6 +17,65 @@ def hitung_acceptance(sample_size, aql_percent):
 # Halaman BERANDA
 # ------------------------
 if page == "Beranda":
+
+    if page == "Beranda":
+    # Tambahkan gaya CSS untuk tampilan profesional
+    st.markdown("""
+        <style>
+        .intro-box {
+            background-color: #f0f8ff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #dce6f1;
+        }
+        .feature-box {
+            background-color: #e6f7e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cce0cc;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.title("📦 Selamat Datang di Kalkulator AQL")
+
+    # Penjelasan AQL
+    st.markdown("""
+    <div class='intro-box'>
+        <h4>🔍 Apa itu AQL?</h4>
+        <p>
+        <strong>AQL (Acceptable Quality Limit)</strong> adalah jumlah maksimum cacat yang dapat diterima dalam suatu sampel inspeksi.
+        Kalkulator ini membantu Anda menentukan apakah <em>lot produksi</em> dapat <strong>diterima</strong> atau <strong>ditolak</strong> berdasarkan parameter yang Anda masukkan.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.subheader("🎯 Fitur Utama")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("""
+        <div class='feature-box'>
+        ✅ Perhitungan cepat berbasis nilai AQL<br>
+        ✅ Tidak perlu buka tabel manual<br>
+        ✅ Cocok untuk operator QC di lapangan
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+        <div class='feature-box'>
+        ⚙️ Bisa digunakan untuk berbagai ukuran lot<br>
+        📊 Tampilan hasil kalkulasi yang jelas<br>
+        🏭 Siap digunakan dalam lingkungan industri
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.info("👈 Gunakan menu di sebelah kiri untuk membuka kalkulator AQL.")
+
     st.title("📦🥼 Selamat Datang di Kalkulator AQL kelompok 3")
     st.write("""
     AQL (**Acceptable Quality Limit**) adalah batas maksimum jumlah produk cacat yang dianggap masih dapat diterima dalam suatu sampel inspeksi.
