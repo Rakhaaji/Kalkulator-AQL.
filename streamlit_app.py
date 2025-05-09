@@ -104,6 +104,16 @@ if page == "Beranda":
 # ------------------------
 elif page == "Kalkulator AQL":
     st.title("⚖️ Kalkulator AQL")
+    st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://img.freepik.com/free-vector/factory-scene-with-river-foreground_1308-32357.jpg?t=st=1746794892~exp=1746798492~hmac=316f122289c03f1f42fb412ed82a50e1399b075c6add2252da4dcd74d0668dab&w=1380');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: orange !important;
+    }
 
         # Input
     lot_size = st.number_input("Ukuran Lot", min_value=1, value=500)
