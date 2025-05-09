@@ -14,7 +14,7 @@ def hitung_acceptance(sample_size, aql_percent):
 
 # ------------------------
 # Halaman BERANDA
-# ------------------------
+
 if page == "Beranda":
 
     # Gaya industri dan latar belakang
