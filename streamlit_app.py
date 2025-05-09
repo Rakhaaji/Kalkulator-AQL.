@@ -42,7 +42,7 @@ if page == "Beranda":
             border: 1px solid #cbd5e0;
         }
         .group-box {
-            background-color: #fefcbf;
+            background-color:(to top, #000000, #b7791f, #f6ad55) ;
             padding: 15px;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
