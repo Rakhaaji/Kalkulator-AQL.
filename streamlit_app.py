@@ -12,7 +12,7 @@ def hitung_acceptance(sample_size, aql_percent):
     aql = aql_percent / 100
     return math.floor(sample_size * aql + 0.5)
 
-
+# ------------------------
 # Halaman BERANDA
 # ------------------------
 if page == "Beranda":
