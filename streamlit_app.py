@@ -79,13 +79,7 @@ if page == "Beranda":
 
     st.markdown("---")
     st.success("👈 Gunakan menu di sebelah kiri untuk memulai kalkulasi AQL.")
-    background-color:(to top, #000000, #b7791f, #f6ad55) ;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-            font-weight: 500;
-        }
-
+    
     st.markdown("### 👩🏻‍🔬👨🏻‍🔬 Kelompok Pengembang")
     st.markdown("""
     <div class='group-box'>
