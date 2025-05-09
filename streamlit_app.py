@@ -22,7 +22,7 @@ if page == "Beranda":
     <style>
     .stApp {
         background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                    url('https://img.freepik.com/free-photo/person-paying-using-nfc-technology_23-2149893740.jpg');
+                    url('https://img.freepik.com/free-photo/pedestrian-bridge-against-blue-sky_1127-2835.jpg?t=st=1746794450~exp=1746798050~hmac=ec2cef5e2f1c840e8fbc5bb26a45465f089a379197697d2db299c0fa8e3ea0c0&w=1380');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
