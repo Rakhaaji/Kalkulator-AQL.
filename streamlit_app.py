@@ -26,7 +26,7 @@ if page == "Beranda":
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        color: white !important;
+        color: black !important;
     }
         .container {
             background-color: rgba(255, 255, 255, 0.85);
