@@ -68,7 +68,7 @@ if page == "Beranda":
         border-radius: 12px;
     }
     .feature-box {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color:(to bottom right, #000000, #6b46c1, #3182ce);
         padding: 15px;
         border-radius: 10px;
         margin-bottom: 10px;
