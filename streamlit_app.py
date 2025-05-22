@@ -171,8 +171,9 @@ elif page == "Kalkulator AQL":
             sehingga *lot ini tidak memenuhi syarat* dan harus ditolak atau diperiksa ulang.
             """)
 
-                    
-           
+
        
-  
-      
+
+     
+   
+   
