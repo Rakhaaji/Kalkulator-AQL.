@@ -63,7 +63,7 @@ if page == "Beranda":
         color: orange !important;
     }
     .container {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color:(to bottom right, #000000, #6b46c1, #3182ce);
         padding: 2rem;
         border-radius: 12px;
     }
